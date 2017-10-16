@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bdGnsis", "bdGnsis\bdGnsis.csproj", "{6E6DF7D0-C535-4AB4-951C-81B600AAA648}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bd", "bdGnsis\bd.csproj", "{6E6DF7D0-C535-4AB4-951C-81B600AAA648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lgGnsis", "lgGnsis\lgGnsis.csproj", "{101CD8A8-EA25-4CD9-B323-B8894EE2F8DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lg", "lgGnsis\lg.csproj", "{101CD8A8-EA25-4CD9-B323-B8894EE2F8DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnsis", "Gnsis\Gnsis.csproj", "{91F515AE-6CB4-47D6-AC72-AD9603AEABF7}"
 EndProject
