@@ -28,11 +28,9 @@ namespace bdGnsis
                         case 1:
                             while (lector.Read())
                             {
-
                                 _EntiC.ID = Convert.ToInt32(lector["ID"]);
                                 _EntiC.Cliente = Convert.ToString(lector["Cliente"]);
                                 _EntiC.Telefono = Convert.ToDouble(lector["Telefono"]);
-
                             }
                             break;
                         case 2:
@@ -54,8 +52,113 @@ namespace bdGnsis
             }
             catch (System.IO.IOException e)
             {
-                System.Windows.Forms.MessageBox.Show(e.Message, "ERROR BD007");
+                System.Windows.Forms.MessageBox.Show(e.Message, "ERROR BD001");
             }
         }
+
+        public void Actualizar (int tipo)
+        {
+            try
+            {
+                using (conn)
+                {
+                    command = new SqlCommand("SP_Actualizar", conn);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@tipo", SqlDbType.Int).Value = tipo;
+
+
+                    switch (tipo)
+                    {
+                        case 1:
+                            command.Parameters.AddWithValue("@Cliente", _EntiC.Cliente);
+                            command.Parameters.AddWithValue("@Telefono", _EntiC.Telefono);
+                            command.ExecuteNonQuery();
+                            break;
+                        case 2:
+                            command.Parameters.AddWithValue("@IDCliente", _EntiT.IDCliente);
+                            command.Parameters.AddWithValue("@TipoTrabajo", _EntiT.TipoTrabajo);
+                            command.Parameters.AddWithValue("@Pedido", _EntiT.Pedido);
+                            command.Parameters.AddWithValue("@Detalle", _EntiT.Detalle);
+                            command.Parameters.AddWithValue("@FechaRecepcion", _EntiT.FechaRecepcion);
+                            command.Parameters.AddWithValue("@FechaEntrega", _EntiT.FechaEntrega);
+                            command.Parameters.AddWithValue("@Entrega", _EntiT.Entrega);
+                            command.Parameters.AddWithValue("@Precio", _EntiT.Precio);
+                            command.ExecuteNonQuery();
+                            break;
+                    }
+                }
+            }
+            catch (System.IO.IOException e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message, "ERROR BD002");
+            }
+        }
+
+        public void Eliminar(int tipo)
+        {
+            try
+            {
+                using (conn)
+                {
+                    command = new SqlCommand("Sp_Eliminar", conn);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@Tipo", SqlDbType.Int).Value = tipo;
+
+                    switch (tipo)
+                    {
+                        case 1:
+                            command.Parameters.AddWithValue("@ID", _EntiC.ID);
+                            command.ExecuteNonQuery();                      
+                            break;
+                        case 2:
+                            command.Parameters.AddWithValue("@ID", _EntiT.ID);
+                            command.ExecuteNonQuery();
+                            break;
+                    }
+                }
+            }
+            catch (System.IO.IOException e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message, "ERROR BD003");
+            }
+        }
+
+        public void Guardar(int tipo)
+        {
+            try
+            {
+                using (conn)
+                {
+                    command = new SqlCommand("SP_Guardar", conn);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@Tipo", SqlDbType.Int).Value = tipo;
+
+                    switch (tipo)
+                    {
+                        case 1:
+                            command.Parameters.AddWithValue("@Cliente", _EntiC.Cliente);
+                            command.Parameters.AddWithValue("@Telefono", _EntiC.Telefono);
+                            command.ExecuteNonQuery();
+                            break;
+                        case 2:
+                            command.Parameters.AddWithValue("@IDCliente", _EntiT.IDCliente);
+                            command.Parameters.AddWithValue("@TipoTrabajo", _EntiT.TipoTrabajo);
+                            command.Parameters.AddWithValue("@Pedido", _EntiT.Pedido);
+                            command.Parameters.AddWithValue("@Detalle", _EntiT.Detalle);
+                            command.Parameters.AddWithValue("@FechaRecepcion", _EntiT.FechaRecepcion);
+                            command.Parameters.AddWithValue("@FechaEntrega", _EntiT.FechaEntrega);
+                            command.Parameters.AddWithValue("@Entrega", _EntiT.Entrega);
+                            command.Parameters.AddWithValue("@Precio", _EntiT.Precio);
+                            command.ExecuteNonQuery();
+                            break;
+                    }
+                }
+            }
+            catch (System.IO.IOException e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message, "ERROR BD004");
+            }
+        }
+
     }
 }
