@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{91F515AE-6CB4-47D6-AC72-AD9603AEABF7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Gnsis</RootNamespace>
-    <AssemblyName>Gnsis</AssemblyName>
+    <RootNamespace>Aplicacion</RootNamespace>
+    <AssemblyName>Aplicacion</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Gnsis.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -67,7 +70,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\lgGnsis.EntidadesClass+TbClientes.datasource" />
+    <None Include="Properties\DataSources\Capa_Entidades.EntidadesClass+TbClientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,9 +85,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\lgGnsis\lg.csproj">
+    <ProjectReference Include="..\lgGnsis\Capa Entidades.csproj">
       <Project>{101cd8a8-ea25-4cd9-b323-b8894ee2f8de}</Project>
-      <Name>lg</Name>
+      <Name>Capa Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
