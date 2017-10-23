@@ -49,10 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCliente.cs" />
-    <Compile Include="frmCliente.Designer.cs">
-      <DependentUpon>frmCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +85,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\lgGnsis\Capa Entidades.csproj">
+    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
       <Project>{101cd8a8-ea25-4cd9-b323-b8894ee2f8de}</Project>
       <Name>Capa Entidades</Name>
     </ProjectReference>

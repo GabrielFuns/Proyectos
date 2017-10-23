@@ -43,15 +43,5 @@
     <Compile Include="LogicaClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\bdGnsis\Capa Datos.csproj">
-      <Project>{6e6df7d0-c535-4ab4-951c-81b600aaa648}</Project>
-      <Name>Capa Datos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Gnsis\Aplicacion.csproj">
-      <Project>{91f515ae-6cb4-47d6-ac72-ad9603aeabf7}</Project>
-      <Name>Aplicacion</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
