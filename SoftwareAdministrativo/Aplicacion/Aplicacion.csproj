@@ -49,16 +49,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevoC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoC.Designer.cs">
+      <DependentUpon>frmNuevoC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoT.Designer.cs">
+      <DependentUpon>frmNuevoT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoC.resx">
+      <DependentUpon>frmNuevoC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +109,10 @@
     <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
       <Project>{101cd8a8-ea25-4cd9-b323-b8894ee2f8de}</Project>
       <Name>Capa Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Logica\Capa Logica.csproj">
+      <Project>{c2940206-583d-4d1b-8b09-75fa5166dfa8}</Project>
+      <Name>Capa Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
