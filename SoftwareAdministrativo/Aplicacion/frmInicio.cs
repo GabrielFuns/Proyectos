@@ -13,8 +13,6 @@ namespace Aplicacion
 {
     public partial class frmInicio : Form
     {
-        int tipo = 1;
-        string comand = "SP_Cargar";
         LogicaClass lc = new LogicaClass();
 
         public frmInicio()
@@ -23,19 +21,19 @@ namespace Aplicacion
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnAgregarC_Click(object sender, EventArgs e)
+        private void BtnAgregarC_Click(object sender, EventArgs e)
         {
             frmNuevoC f = new frmNuevoC();
             f.Show();
 
         }
 
-        private void btnInfo_Click(object sender, EventArgs e)
+        private void BtnInfo_Click(object sender, EventArgs e)
         {
             frmInfo f = new frmInfo();
             f.Show();
